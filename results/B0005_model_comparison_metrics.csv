@@ -1,0 +1,9 @@
+Experiment,Model,MAE (Ah),RMSE (Ah),R2 Score
+Experiment 1: discharge-number models,Linear regression: discharge number,0.030850788743712727,0.038824982475651144,-2.055364966845792
+Experiment 1: discharge-number models,Random forest: discharge number,0.050612866220398324,0.055272209315738376,-5.192331625562284
+Experiment 1: discharge-number models,Last observed capacity baseline,0.061153544760196445,0.0650623618717935,-7.580255248501876
+Experiment 1: discharge-number models,Training mean baseline,0.3103537893400971,0.3111476007514058,-195.23364502310216
+Experiment 2: retrospective feature models,Linear regression: completed-discharge features,0.0026697745475642493,0.0028877439506728186,0.983097228386626
+Experiment 2: retrospective feature models,Random forest: completed-discharge features,0.050040521794350035,0.05451084867940079,-5.022910992180699
+Experiment 3: one-step-ahead models,Persistence baseline,0.006542014476066073,0.010010341869620083,0.7968866930467314
+Experiment 3: one-step-ahead models,Lagged linear regression,0.005939365718539578,0.010109286132403663,0.792851622597651
