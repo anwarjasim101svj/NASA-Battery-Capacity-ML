@@ -109,11 +109,11 @@ This reference is the first measured capacity, not necessarily the manufacturer'
 
 The project evaluates multiple approaches, including:
 
-Linear Regression using discharge number.
-Random Forest Regression using discharge number.
-Retrospective capacity estimation using discharge-cycle features.
-Lagged Linear Regression for rolling one-step-ahead estimation.
-A persistence baseline that predicts the next capacity using the previous measured capacity.
+- Linear Regression using discharge number.
+- Random Forest Regression using discharge number.
+- Retrospective capacity estimation using discharge-cycle features.
+- Lagged Linear Regression for rolling one-step-ahead estimation.
+- A persistence baseline that predicts the next capacity using the previous measured capacity.
 
 The models are evaluated using Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and the coefficient of determination ((R^2)) where appropriate.
 
