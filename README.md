@@ -112,9 +112,10 @@ The rolling one-step-ahead evaluation uses previously measured capacities for su
 Model performance is compared with a persistence baseline. A small improvement in one metric does not establish that a model is clearly superior.
 Small capacity increases between adjacent records should not automatically be interpreted as physical battery recovery.
 Generalization to other battery cells, chemistries, or operating conditions has not been evaluated.
-Repository Structure
+
+#Repository Structure
 NASA-Battery-Capacity-ML/
-├── NASA_B0005_Battery_Capacity_Project_GitHub.ipynb
+├── NASA_B0005_Battery_Capacity_Project.ipynb
 ├── README.md
 └── figures/
     ├── capacity_degradation.png
