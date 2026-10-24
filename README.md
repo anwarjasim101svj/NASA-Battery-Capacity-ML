@@ -107,15 +107,23 @@ This reference is the first measured capacity, not necessarily the manufacturer'
 
 -- Model Evaluation
 
-The project evaluates multiple approaches, including:
+The project evaluates several regression approaches for analyzing and estimating lithium-ion battery discharge capacity:
 
-- Linear Regression using discharge number.
-- Random Forest Regression using discharge number.
-- Retrospective capacity estimation using discharge-cycle features.
-- Lagged Linear Regression for rolling one-step-ahead estimation.
-- A persistence baseline that predicts the next capacity using the previous measured capacity.
+- Linear Regression using discharge number: Establishes a simple trend-based estimate of capacity degradation.
+- Random Forest Regression using discharge number: Evaluates whether a nonlinear model can capture the degradation trend.
+- Retrospective capacity estimation: Uses features extracted from a completed discharge cycle, such as voltage, current, temperature, and discharge duration, to estimate capacity for that same cycle.
+- Lagged Linear Regression: Uses previously measured discharge capacities to predict the next cycle in a rolling one-step-ahead evaluation.
+- Persistence baseline: Serves as a reference model by predicting that the next cycle's capacity will equal the previous cycle's measured capacity.
 
 The models are evaluated using Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and the coefficient of determination ((R^2)) where appropriate.
+
+The retrospective estimation experiment is distinct from next-cycle prediction because it uses measurements from the discharge being evaluated. The rolling one-step-ahead experiment instead uses previous measured capacities, with actual observations incorporated as the evaluation progresses.
+
+-- Key Finding
+
+In the rolling one-step-ahead evaluation, Lagged Linear Regression achieved an MAE of approximately 0.0059 Ah, compared with 0.0065 Ah for the persistence baseline. Their overall performance was similar, so the results indicate only a modest improvement in MAE rather than a decisive advantage over the baseline.
+
+These results apply to the NASA B0005 dataset and should not be interpreted as evidence of generalization to other batteries or operating conditions.
 
 -- Limitations
 
